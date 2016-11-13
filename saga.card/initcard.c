@@ -1,6 +1,6 @@
 /*
     Copyright 2016, Jason S. McMullan <jason.mcmullan@gmail.com>
-    Licensed under the MIT (Expat) license. ©
+    Licensed under the MIT (Expat) license. Â©
 */
 
 #include  <string.h>
@@ -16,7 +16,7 @@
 
 #include "saga_private.h"
 
-#define FBMEM_ALIGN     16
+#define FBMEM_ALIGN     32
 
 static void add_resolution(struct BoardInfo *bi, ULONG displayid, const struct ModeInfo *tmpl)
 {
