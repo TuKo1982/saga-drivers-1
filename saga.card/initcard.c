@@ -16,7 +16,7 @@
 
 #include "saga_private.h"
 
-#define FBMEM_ALIGN     64
+#define FBMEM_ALIGN     (64*1024)
 
 static void add_resolution(struct BoardInfo *bi, ULONG displayid, const struct ModeInfo *tmpl)
 {
