@@ -1,6 +1,6 @@
 /*
     Copyright 2016, Jason S. McMullan <jason.mcmullan@gmail.com>
-    Licensed under the MIT (Expat) license. ©
+    Licensed under the MIT (Expat) license. Â©
 */
 
 #include <aros/libcall.h>
@@ -38,11 +38,14 @@
 *****************************************************************************/
 {
     AROS_LIBFUNC_INIT
-
+        
+    int bpp = 0;
+            
     debug("Width=%ld, RGBFormat=%ld", width, RGBFormat);
-
-    return format2bpp(RGBFormat) * width;
-
+            
+    bpp = format2bpp(RGBFormat);
+            
+    Write16(SAGA_VIDEO_BURSTPERROW, ( ( width * bpp ) / 32 ) - 1);
+    return ( bpp * width );
     AROS_LIBFUNC_EXIT
 }
-
