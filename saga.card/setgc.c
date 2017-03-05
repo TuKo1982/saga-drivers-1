@@ -110,11 +110,7 @@
     sc->sc_DoubleScan = doublescan;
 
     /* Compute BurstPerRow */
-    /* width = width >> ( IS_DOUBLEX(width) ? 1 : 0 ); */
-    burstPerRow = ( ( width * format2bpp((RGBFTYPE)sc->sc_Format) ) / 32 ) - 1;
-            
     Write16(SAGA_VIDEO_MODULO, 0);
-    Write16(SAGA_VIDEO_BURSTPERROW, burstPerRow);
 
     Write16(SAGA_VIDEO_MODE, SAGA_VIDEO_MODE_FORMAT(sc->sc_Format) |
                              SAGA_VIDEO_MODE_DBLSCN(sc->sc_DoubleScan));        
