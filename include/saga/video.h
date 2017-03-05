@@ -40,12 +40,13 @@
 #define SAGA_VIDEO_DBLSCAN_Y         2
 #define SAGA_VIDEO_DBLSCAN_XY        (SAGA_VIDEO_DBLSCAN_X | SAGA_VIDEO_DBLSCAN_Y)
 
-#define SAGA_VIDEO_MEMSIZE   0x00800000    /* Default 8M video ram */
+#define SAGA_VIDEO_MEMSIZE      0x00800000    /* Default 8M video ram */
 
-#define SAGA_VIDEO_PLANEPTR  0x00DFF1EC    /* 32-bit pointer to video ram */
-#define SAGA_VIDEO_RESV_1F0  0x00DFF1F0    /* RESERVED */
-#define SAGA_VIDEO_RESV_1F2  0x00DFF1F2    /* RESERVED */
-#define SAGA_VIDEO_MODE      0x00DFF1F4    /* 16-bit mode */
+#define SAGA_VIDEO_PLANEPTR     0x00DFF1EC    /* 32-bit pointer to video ram */
+#define SAGA_VIDEO_BURSTPERROW  0x00DFF1F0    /* RESERVED */
+#define SAGA_VIDEO_MODULO       0x00DFF1E6
+#define SAGA_VIDEO_RESV_1F2     0x00DFF1F2    /* RESERVED */
+#define SAGA_VIDEO_MODE         0x00DFF1F4    /* 16-bit mode */
 #define   SAGA_VIDEO_MODE_FORMAT(x)  (((x) & 0xff) << 0)
 #define   SAGA_VIDEO_MODE_DBLSCN(x)  (((x) & 0xff) << 8)
 
