@@ -38,7 +38,6 @@
 *****************************************************************************/
 {
     AROS_LIBFUNC_INIT
-    UWORD burstPerRow = 0;
     UWORD width, hsstrt, hsstop, htotal;
     UWORD height, vsstrt, vsstop, vtotal;
     UBYTE doublescan = 0;
