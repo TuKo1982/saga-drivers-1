@@ -1,6 +1,6 @@
 /*
     Copyright 2016, Jason S. McMullan <jason.mcmullan@gmail.com>
-    Licensed under the MIT (Expat) license. ©
+    Licensed under the MIT (Expat) license. Â©
 */
 
 #include <aros/libcall.h>
@@ -38,6 +38,7 @@
 *****************************************************************************/
 {
     AROS_LIBFUNC_INIT
+    UWORD burstPerRow = 0
     UWORD width, hsstrt, hsstop, htotal;
     UWORD height, vsstrt, vsstop, vtotal;
     UBYTE doublescan = 0;
