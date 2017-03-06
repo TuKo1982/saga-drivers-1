@@ -34,6 +34,8 @@
 #define SAGA_VIDEO_FORMAT_RGB24      4       /* R8|G8|B8 */
 #define SAGA_VIDEO_FORMAT_RGB32      5       /* -|R8|G8|B8 */
 #define SAGA_VIDEO_FORMAT_YUV422     6       /* Y4|U2|V2 */
+#define SAGA_VIDEO_FORMAT_NEOGEO     7       /* NEO GEO Mode */
+#define SAGA_VIDEO_FORMAT_PLANAR     8       /* PLANAR Mode */
 
 #define SAGA_VIDEO_DBLSCAN_OFF       0
 #define SAGA_VIDEO_DBLSCAN_X         1
@@ -44,20 +46,20 @@
 
 #define SAGA_VIDEO_MODULO       0x00DFF1E6
 #define SAGA_VIDEO_PLANEPTR     0x00DFF1EC    /* 32-bit pointer to video ram */
-#define SAGA_VIDEO_BURSTPERROW  0x00DFF1F0    /* RESERVED */
+#define SAGA_VIDEO_BURSTPERROW  0x00DFF1F0    /* Burst Per Row */
 #define SAGA_VIDEO_RESV_1F2     0x00DFF1F2    /* RESERVED */
 #define SAGA_VIDEO_MODE         0x00DFF1F4    /* 16-bit mode */
-#define   SAGA_VIDEO_MODE_FORMAT(x)  (((x) & 0xff) << 0)
-#define   SAGA_VIDEO_MODE_DBLSCN(x)  (((x) & 0xff) << 8)
+#define SAGA_VIDEO_MODE_FORMAT(x)  (((x) & 0xff) << 0)
+#define SAGA_VIDEO_MODE_DBLSCN(x)  (((x) & 0xff) << 8)
 
 #define SAGA_VIDEO_CLUT(x)   (0x00DFF400 + (((x) & 0xFF) << 2))
 
 #define SAGA_VIDEO_PLLW    0x00DFF1F8
-#define   SAGA_VIDEO_PLLW_MAGIC        0x43430000
-#define   SAGA_VIDEO_PLLW_CS(x)        (((x) & 1) << 0)
-#define   SAGA_VIDEO_PLLW_CLK(x)       (((x) & 1) << 1)
-#define   SAGA_VIDEO_PLLW_MOSI(x)      (((x) & 1) << 2)
-#define   SAGA_VIDEO_PLLW_UPDATE(x)    (((x) & 1) << 3)
+#define SAGA_VIDEO_PLLW_MAGIC        0x43430000
+#define SAGA_VIDEO_PLLW_CS(x)        (((x) & 1) << 0)
+#define SAGA_VIDEO_PLLW_CLK(x)       (((x) & 1) << 1)
+#define SAGA_VIDEO_PLLW_MOSI(x)      (((x) & 1) << 2)
+#define SAGA_VIDEO_PLLW_UPDATE(x)    (((x) & 1) << 3)
 
 #define SAGA_VIDEO_PLLR    0x00DFF1FA
 
