@@ -218,6 +218,8 @@ void dump_BoardInfo(struct BoardInfo *bi)
     bug("  sizeof() = %lu\n", sizeof(*bi));
 }
 
+/* RGBFTYPE to Bytes Per Pixel */
+
 int format2bpp(RGBFTYPE format)
 {
     if ((1UL << format) & (RGBMASK_8BIT | RGBFF_Y4U1V1) )
@@ -228,6 +230,24 @@ int format2bpp(RGBFTYPE format)
         return 3;
     if ((1UL << format) & RGBMASK_32BIT)
         return 4;
+
+    return 0;
+}
+
+/* RGBFTYPE to Bits Per Pixel */
+
+int format2BPP(RGBFTYPE format)
+{
+    if ((1UL << format) & (RGBMASK_8BIT | RGBFF_PLANAR) )
+        return 1;
+    if ((1UL << format) & (RGBMASK_8BIT | RGBFF_Y4U1V1) )
+        return 8;
+    if ((1UL << format) & (RGBMASK_15BIT | RGBMASK_16BIT | RGBFF_Y4U2V2))
+        return 16;
+    if ((1UL << format) & RGBMASK_24BIT)
+        return 24;
+    if ((1UL << format) & RGBMASK_32BIT)
+        return 32;
 
     return 0;
 }
