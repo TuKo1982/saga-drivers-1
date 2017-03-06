@@ -38,14 +38,15 @@
 *****************************************************************************/
 {
     AROS_LIBFUNC_INIT
-        
-    int bpp = 0;
-            
+    
+    int BPP = 0;
+    
     debug("Width=%ld, RGBFormat=%ld", width, RGBFormat);
-            
-    bpp = format2bpp(RGBFormat);
-            
-    Write16(SAGA_VIDEO_BURSTPERROW, ( ( width * bpp ) / 32 ) - 1);
-    return ( bpp * width );
+    
+    // BPP = format2BPP(RGBFormat);
+    // Write16(SAGA_VIDEO_BURSTPERROW, ( ( ( width * BPP ) / 8 ) / 32 ) - 1 );
+    
+    return ( format2bpp(RGBFormat) * width );
+    
     AROS_LIBFUNC_EXIT
 }
