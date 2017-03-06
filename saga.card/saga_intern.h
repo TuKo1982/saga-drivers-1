@@ -111,7 +111,8 @@ const int modeline_vesa_entries;
 /* from saga_intern.c */
 void dump_ModeInfo(struct ModeInfo *mi);
 void dump_BoardInfo(struct BoardInfo *bi);
-int format2bpp(RGBFTYPE format);
+int format2bpp(RGBFTYPE format); /* format to bytes per pixel */
+int format2BPP(RGBFTYPE format); /* format to bits per pixel */
 
 #endif /* SAGA_INTERN_H */
 /* vim: set shiftwidth=4 expandtab:  */
