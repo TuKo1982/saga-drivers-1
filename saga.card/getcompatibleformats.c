@@ -1,6 +1,6 @@
 /*
     Copyright 2016, Jason S. McMullan <jason.mcmullan@gmail.com>
-    Licensed under the MIT (Expat) license. ©
+    Licensed under the MIT (Expat) license. Â©
 */
 
 #include <aros/libcall.h>
@@ -40,7 +40,8 @@
 
     debug("RGBFormat=%ld", RGBFormat);
 
-    return RGBFF_CLUT |
+    return RGBFF_PLANAR |
+           RGBFF_CLUT |
            RGBFF_R8G8B8 |
            RGBFF_A8R8G8B8 |
            RGBFF_R5G6B5 |
