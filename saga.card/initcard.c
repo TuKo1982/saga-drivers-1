@@ -239,7 +239,7 @@ bug("memsize=%lu\n", memsize);
     BIC(ScrollPlanar);
     // BIC(UpdatePlanar);
 
-    if (1) {    /* No blitter support needed - our CPU is fast */
+    if (0) {    /* No blitter support needed - our CPU is fast */
         BIC(BlitPlanar2Chunky);
         BIC(FillRect);
         BIC(InvertRect);
@@ -252,7 +252,8 @@ bug("memsize=%lu\n", memsize);
     } else {
         /* Map to the default Picasso96 defaults */
         BID(BlitPlanar2Chunky);
-        BID(FillRect);
+        // BID(FillRect);
+        BIC(FillRect);
         BID(InvertRect);
         BID(BlitRect);
         BID(BlitTemplate);
@@ -263,7 +264,7 @@ bug("memsize=%lu\n", memsize);
     }
 
     /* Other optional features */
-    if (1) {
+    if (0) {
         BIC(SetDPMSLevel);
     }
 
