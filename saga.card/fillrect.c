@@ -1,6 +1,6 @@
 /*
     Copyright 2016, Jason S. McMullan <jason.mcmullan@gmail.com>
-    Licensed under the MIT (Expat) license. ©
+    Licensed under the MIT (Expat) license. Â©
 */
 
 #include <aros/libcall.h>
@@ -46,8 +46,9 @@
     AROS_LIBFUNC_INIT
 
     debug("");
-
-    return FALSE;
+    
+    return bi->FillRect(bi, ri, x, y, width, height, pen, mask, RGBFormat);
+//    return FALSE;
 
     AROS_LIBFUNC_EXIT
 }
