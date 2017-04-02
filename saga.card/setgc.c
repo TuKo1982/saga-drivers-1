@@ -109,7 +109,7 @@
     sc->sc_DoubleScan = doublescan;
 
     /* Compute BurstPerRow */
-    Write16(SAGA_VIDEO_MODULO, 0);
+    /* Write16(SAGA_VIDEO_MODULO, 0); */
 
     Write16(SAGA_VIDEO_MODE, SAGA_VIDEO_MODE_FORMAT(sc->sc_Format) |
                              SAGA_VIDEO_MODE_DBLSCN(sc->sc_DoubleScan));        
