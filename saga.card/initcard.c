@@ -198,7 +198,7 @@ bug("memsize=%lu\n", memsize);
     }
 
     bi->BoardFlags = (bi->BoardFlags & 0xffff0000) |
-                        //BIF_NOBLITTER |
+                        BIF_NOBLITTER |
                         BIF_NOMEMORYMODEMIX;
 
     for (i = 0; i < MAXMODES; i++) {
