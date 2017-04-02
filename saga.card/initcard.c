@@ -198,7 +198,7 @@ bug("memsize=%lu\n", memsize);
     }
 
     bi->BoardFlags = (bi->BoardFlags & 0xffff0000) |
-                        BIF_NOBLITTER |
+                        //BIF_NOBLITTER |
                         BIF_NOMEMORYMODEMIX;
 
     for (i = 0; i < MAXMODES; i++) {
@@ -239,7 +239,7 @@ bug("memsize=%lu\n", memsize);
     BIC(ScrollPlanar);
     // BIC(UpdatePlanar);
 
-    if (0) {    /* No blitter support needed - our CPU is fast */
+    if (1) {    /* No blitter support needed - our CPU is fast */
         BIC(BlitPlanar2Chunky);
         BIC(FillRect);
         BIC(InvertRect);
@@ -263,7 +263,7 @@ bug("memsize=%lu\n", memsize);
     }
 
     /* Other optional features */
-    if (0) {
+    if (1) {
         BIC(SetDPMSLevel);
     }
 
